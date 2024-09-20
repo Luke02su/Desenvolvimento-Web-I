@@ -1,0 +1,30 @@
+ <HTML>
+    <HEAD>
+        <!-- Meta dados 
+         Dados que descrevem dados -->
+         <TITLE> Cadastro de animais </TITLE>
+    </HEAD>
+
+    <BODY>
+        <center>
+            <!-- Aparece para o usuário -->
+            <H1> Cadastro de animais </H1>
+
+            <FORM action = "cadastrar.php" method="GET"> <!-- via get os dados ficam no endereço, nem tudo é via get (visível). POST os dados ficam escondidos-->
+                <TABLE border="0"> 
+                    <TR> <!-- linha <TH> FICA NEGRITO </TH> -->
+                        <TD><label for="nome"> Nome: </label></TD> <!-- coluna -->
+                        <TD><input type="text" name="nome"/></TD> <!-- input entrada de ddos, tipo e o nome-->
+                    </TR>
+                        <TD><label for="tutor"> Tutor: </label></TD> <!-- coluna -->
+                        <TD><input type="text" name="tutor"/></TD> 
+                    <TR>
+                        <TD colspan="2">
+                            <input type="submit" value="Enviar"/>
+                        </TD>
+                    </TR>
+                </TABLE>
+            </FORM>
+        </center>
+    </BODY>
+</HTML>
