@@ -1,0 +1,69 @@
+<!DOCTYPE html> <!-- Indicar ao navegador que se trata de um arquivo HTML. Digitar html:5 gerá a estrutura básica automaticamente. -->
+<html lang="pt-br"> <!-- Comando básico. O lang indica a idioma. -->
+    <head> <!-- Não será mostrado ao usuário. Apenas ao navegador. -->
+        <meta charset="UTF-8">  <!-- Padrão de caracteres especiais: acentos etc.-->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Compatibilidade com Internet Explorer. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Importante para uma certa responsividade, mas será necessário CSS -->
+        <meta name="description" content="Esse é o meu primeiro site"> <!-- Descrição do site para navegador.-->
+        <meta name="keywords" content="programacao, html, css, javascript"> <!-- Palavras-chave para os mecanismos de busca. Antigamente era muito importante, hoje nem tanto devido a IA do Google, por exemplo.-->
+        <meta name="author" content="Lucas"> <!-- Autor do site. --> 
+        <title>Meu primeiro site</title>
+    </head>
+    <body> <!-- Corpo do site. -->
+        <!--VAMOS APRENDER LINKS-->
+        <h1><img src="./img/icone.png">Página principal</h1> <!-- Título. -->
+
+        <p>Seja bem vindo à página principal.</p> <!-- Parágrafo. -->
+       
+        <hr>
+        <!--Link absoluto (URL absoluta), caminho completo-->
+        <a href="https://google.com"
+        target="_blank">Ir para o Google</a> <!--Link de um site. Target serve para que abra outra aba sem que esta feche -->
+        <hr>
+
+        <!--Caminho relativo: caminho para outro arquivo dentro da pasta.-->
+        <a href="sobre.html">Veja sobre nós</a>
+        <hr>
+
+        <!--Navegando em um arquivo em outra pasta-->
+        <a href="./equipe/dimitri.html" target="meuIframe">Dimitri</a>
+
+        <hr>
+
+        <!--Imagem-->
+        <a href="./imagens.html">Imagem</a>
+
+        <hr>
+
+        <!--Tabelas-->
+        <a href="./tabelas.html">Tabelas</a>
+
+        <hr>
+
+        <a href="./listas.html">Listas</a>
+
+        <hr>
+
+        <a href="./iframe.html">Iframe</a>
+
+        <hr>
+
+        <a href="./formularios.html">Formularios</a>
+
+        <hr>
+        <!-- &nbps; para dar espaço-->
+        <a href="./audio.html">Audio&nbsp;&nbsp;&nbsp;</a>
+
+        <a href="./video.html">Vídeo</a>
+
+        <hr>
+
+        <a href="./semantico.html">HTML Semântico</a>
+
+        <hr>
+
+        <!--Pode usar pedaços em pasta diferente do site, reutilizar. Iframe hoje não é tão utilizado em razões de php fazer isso, banco etc.-->
+        <iframe width="1000" height="1000" style="border:none" src="" name="meuIframe" title="meuIframe"> </iframe>
+
+    </body>
+</html>

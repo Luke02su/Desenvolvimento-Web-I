@@ -1,0 +1,31 @@
+<!DOCTYPE html> <!-- Indicar ao navegador que se trata de um arquivo HTML. Digitar html:5 gerá a estrutura básica automaticamente. -->
+<html lang="pt-br"> <!-- Comando básico. O lang indica a idioma. -->
+    <head> <!-- Não será mostrado ao usuário.-->
+        <meta charset="UTF-8">  <!-- Padrão de caracteres especiais: acentos etc.-->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Compatibilidade com Internet Explorer. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Importante para uma certa responsividade, mas será necessário CSS -->
+        <meta name="description" content"Esse é o meu primeiro site"> <!--Descrição do site para SEO do Google-->
+        <meta name="keywords" content="programacao, html, css, javascript"> <!-- Palavras chaves-->
+        <meta name="author" content="Dimitri Teixeira"> <!--Autor do site.-->
+        <title>Meu primeiro áudio</title>
+    </head>
+    <body> <!-- Corpo do site. -->
+        <h1>Meu primeiro áudio!</h1> <!-- Título. -->
+        <p>Meu primeiro áudio.</p> <!-- Parágrafo. -->
+
+
+        <h2>Áudio de arquivo</h2>
+        <audio controls controlsList="nodownload"> <!--Controls para habilitar opções para reproduzir áudio, retsringir operações de baixar diretamente-->
+            <source src="./audio/lp.mp3" type"audio/mpeg"> <!--conteúdo, fonte do audio, tipo deve ser esse audio/mpeg-->
+        </audio>
+
+        <hr>
+
+        <hr>
+
+        <a href="../aulaHTML/links.html">Retornar</a>
+
+    </body>
+</html>
+
+<!--index é como deve ser chamada a main-->

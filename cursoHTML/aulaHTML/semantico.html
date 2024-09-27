@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Semântico</title>
+    <!--Um pouco de CSS aqui. Não é o ideal, melhor criar arquivo separado HTML semãntico expressa o significado. semântico se refere ao significado, sem a necessidade de passar várias divs, mesma função-->
+    <style>
+       * {
+        box-sizing:border-box;
+        }
+
+        body {
+            margin:0;
+        }
+        .topo {
+            background-color: gray;
+            padding: 20px;
+        }
+
+        .menu {
+            background-color: #333;
+            overflow: hidden;
+        }
+
+        .menu a {
+            color:white;
+            padding: 14px 16px;
+            float:left;
+            display: block;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <!--TAG semãntica para o topo. Poderia usar divs para tudo, mas usar tags semãnticas ajuda o navegador a entender: header, nav, section, footer-->
+    <header class="topo"> <!--Sempre usar divs para seprar blocos: cabeçalho, menu, corpo -->
+        <h1>Topo</h1>
+        <p>Aqui é a parte do topo.</p>
+    </header>
+
+    <!--TAG semãntica para o menu-->
+    <nav class="menu">
+        <a href="./links.html">Links</a>
+        <a href="./links.html">Links</a>
+        <a href="./links.html">Links</a>
+        <a href="./links.html">Links</a>
+    </nav>
+
+    <section class="coluena-50">
+        <article></article>
+            <h2>Coluna</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita aliquam aspernatur sint dolorum facere. Quasi eum necessitatibus reiciendis hic laborum at a, porro quas? Dolorem nostrum maiores repellendus assumenda deleniti.</p>
+        </article>
+    </section>
+    <section>
+        <article>
+            <h2>Coluna</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam tenetur cupiditate, cumque iste soluta veritatis ipsa minus odit aut reiciendis qui quisquam dignissimos placeat voluptatem veniam ducimus nemo commodi fuga.</p>
+        </article>
+    </section>
+
+    <footer>
+        <p>Rodapé</p>
+        <a href="../aulaHTML/links.html">Retornar</a>
+    </footer>
+</body>
+</html>

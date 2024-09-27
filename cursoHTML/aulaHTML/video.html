@@ -1,0 +1,26 @@
+<!DOCTYPE html> <!-- Indicar ao navegador que se trata de um arquivo HTML. Digitar html:5 gerá a estrutura básica automaticamente. -->
+<html lang="pt-br"> <!-- Comando básico. O lang indica a idioma. -->
+    <head> <!-- Não será mostrado ao usuário.-->
+        <meta charset="UTF-8">  <!-- Padrão de caracteres especiais: acentos etc.-->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Compatibilidade com Internet Explorer. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Importante para uma certa responsividade, mas será necessário CSS -->
+        <meta name="description" content"Esse é o meu primeiro site"> <!--Descrição do site para SEO do Google-->
+        <meta name="keywords" content="programacao, html, css, javascript"> <!-- Palavras chaves-->
+        <meta name="author" content="Dimitri Teixeira"> <!--Autor do site.-->
+        <title>Meu primeiro vídeo</title>
+    </head>
+    <body> <!-- Corpo do site. -->
+        <h1>Meu primeiro vídeo!</h1> <!-- Título. -->
+        <p>Meu primeiro vídeo.</p> <!-- Parágrafo. -->
+
+        <h1>TAG de vídeo</h1>
+
+        <!--Se o vídeo não for local da pasta, se for da internet, usa-se o iframe incorporando o vídeo.-->
+        <video poster="img/cadeado.png" width="100%" controls autoplay disaplepicturepicture controlsList="nodownload"> <!--Configurações do vídeo-->
+            <source src="./video/linkinpark.mp4" type="video/mp4">
+        </video>
+
+        <a href="./links.html">Voltar para principal</a>
+    </body>
+</html>
+

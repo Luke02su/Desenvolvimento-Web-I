@@ -1,0 +1,60 @@
+<!DOCTYPE html> <!-- Indicar ao navegador que se trata de um arquivo HTML. Digitar html:5 gerá a estrutura básica automaticamente. -->
+<html lang="pt-br"> <!-- Comando básico. O lang indica a idioma. -->
+    <head> <!-- Não será mostrado ao usuário.-->
+        <meta charset="UTF-8">  <!-- Padrão de caracteres especiais: acentos etc.-->
+        <meta http-equiv="X-UA-Compatible" content="IE-edge"> <!--Compatibilidade com Internet Explorer. -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Importante para uma certa responsividade, mas será necessário CSS -->
+        <meta name="description" content"Esse é o meu primeiro site"> <!--Descrição do site para SEO do Google-->
+        <meta name="keywords" content="programacao, html, css, javascript"> <!-- Palavras chaves-->
+        <meta name="author" content="Dimitri Teixeira"> <!--Autor do site.-->
+        <title>Página de tabelas</title>
+    </head>
+    <body> <!-- Corpo do site. -->
+        <h1>Minha primeira tabela!</h1> <!-- Título. -->
+        <p>Minha primeira tabela.</p> <!-- Parágrafo. -->
+
+    <hr>
+
+    <!--Usar CSS para estilizar. border e width são própios da table. Os demais ideal usar CSS-->
+    <table width="100%" border="1" style="text-align:center;">
+        <tr> <!--Linha-->
+            <th>Nome</th> <!--Coluna principal em negrito-->
+            <th>Idade</th>
+            <th>Peso</th>
+            <th>Linguagem</th>
+        </tr>
+        <tr> <!--Linha-->
+            <td>Dimitri</td> <!--Coluna td sem estar em negrito-->
+            <td>18 anos</td>
+            <td>60 kg</td>
+            <td>HTML</td>
+        </tr>
+    </table>
+
+    <br>
+
+    <table width="100%" border="1">
+        <tr>
+            <th>Alimento</th>
+            <th>Carboidratos</th>
+            <th>Gorduras Saturadas</th>
+            <th>Proteínas</th>            
+        </tr>
+        <tr>
+            <td>Bolacha</td>
+            <td>20g</td>
+            <td>5g</td>
+            <td>0g</td>
+        </tr>
+        <tr>
+            <td>Picanha</td>
+            <td>0g</td>
+            <td>10g</td>
+            <td>100g</td>
+        </tr>
+    </table>
+
+    </body>
+</html>
+
+<!--index é como deve ser chamada a main-->
