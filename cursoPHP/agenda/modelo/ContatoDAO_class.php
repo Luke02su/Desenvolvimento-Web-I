@@ -34,6 +34,37 @@
             }
         }
 
+        public function listar($query = null) {
+            //se não recebe parãmetro *ou seja, uma consulta personalizada)
+            //$query recebe nulo
+            try {
+                if ($query == null) {
+                    $dados = $this->con->query("SELECT * FROM contato"); //Se for null, faz a busca geral, não especifica
+                    //dataset (conjunto de dados) com todos os dados
+                    //query() é a função PDO, executa SQL
+                } else {
+                    $dados = $this->con->query($query);
+                    //se listar receber parãmetro este será uma SQL
+                    //SQL específica
+                }
+                $lista = array(); //crio chamando função array()
+                foreach($dados as $linha) { 
+                //percorre linha a linha de dados e coloca cada registro 
+                //na variável linha, que é um array (vetor)
+                    $c = new Contato();
+                    $c->setId($linha["id"]);
+                    $c->setNome($linha["nome"]);
+                    $c->setTelefone($linha["telefone"]);
+                    $c->setEmail(["email"]);
+                    $lista[] = $c; //vetor de objetos
+                }
+                return $lista;
+            }
+            catch(PDOException $ex) {
+                echo "Erro " . $ex->getMessage();
+            }
+        }
+
 
 
     }
