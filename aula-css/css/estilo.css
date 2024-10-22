@@ -1,0 +1,54 @@
+/*body {
+    background-color:yellow;
+}
+h1 {
+    color:blue;
+    font-size:88px;
+}
+
+h2 {
+    color: green;
+    font-size:30px;
+}*/
+
+/**{
+    padding:20px;
+}
+
+body {
+    background-color: rgb(235, 235, 235);
+}
+
+.vermelho {
+    color: red;
+}
+
+.center {
+    text-align: center;
+}
+
+.fonte-30 { Posso dar o nome que eu quiser para a classe
+    font-size: 30px;
+}
+
+#teste {
+    color: blue;
+    background:yellow;
+}
+
+h1, p { Posso agrupar as duas tags, pois possuem itens em comum
+    color:green;
+    text-align:center;
+}
+
+.fonte-30, .center { Posso agrupar as duas tags, pois possuem itens em comum
+    text-align: left;
+}*/
+
+h1 {
+    color:#13a3a8;
+}
+
+p {
+    color: red;
+}

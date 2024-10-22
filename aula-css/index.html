@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aprendendo CSS</title>
-    <style> <!--CSS interno, sem a necessidade de passar inline po inline-->
+    <link rel="stylesheet" href="css/estilo.css"> <!-- Linkando o CSS Externo. Mais adequado, profissinal, controlável. Não precisa mudar de página em página, sendo apenas necessário usar o link-->
+    <!--<style> <!--CSS interno, sem a necessidade de passar inline po inline
         body {
             background-clip: inherit;
         }
@@ -13,12 +14,29 @@
             font-size: 88px;
         }
 
-    </style>
+    </style>-->
 </head>
-<body style=background:yellow> <!--CSS Inline (em linha). Nem sempre isso é prático, pois funciona apenas para essa linha, para debaixo já não.-->
-    <h1 style=color:blue; font-size:88px>Primeiro Site com CSS</h1> <!-- Inline tem preferência máxima, comparado ao CSS interno --> 
-    <h1>Outro comentário</h1>
-    <h2>Outro componente</h2>
+<body> <!-- style=background:yellow> <!--CSS Inline (em linha). Nem sempre isso é prático, pois funciona apenas para essa linha, para debaixo já não.-->
+    <!-- <h1 style=color:blue; font-size:88px>Primeiro Site com CSS</h1> <!--Inline tem preferência máxima, comparado ao CSS interno -->
+    <h1 class="center">Meu primeiro site com CSS</h1>
+    
+    <p class="center vermelho">Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque molestias dolores voluptatem numquam dolor quas quia consectetur cupiditate dignissimos voluptate recusandae id, et maxime itaque adipisci veritatis eveniet asperiores esse.</p>
+    <p id="teste">Nemo nam laboriosam, architecto dolorum excepturi recusandae similique veniam nulla a! Nostrum temporibus sint repudiandae nisi repellendus ut, qui aut officiis, suscipit magnam voluptas assumenda, nesciunt quod autem odio ad.</p>
+    <p class="vermelho fonte-30">Voluptatum fugit itaque ut voluptas reiciendis, id quibusdam mollitia! Vero sit nesciunt blanditiis neque id et veritatis consequuntur excepturi saepe repellendus quis, sunt facere cumque vitae delectus ipsum fugit illum.</p>
+
+
     <a href="outra.html">Ir para outra página</a>
 </body>
 </html>
+
+<!--A ordem de priridade é: CSS inline, inertno e externo. Não é possível o CSS externo sobreescrever o interno e o inline, nem o interno sobreescrever o inliee.
+Use sempre um padrão: CSS externo-->
+
+<!-- Primeiro seletor: coloca a TAG específica
+ Segundo seletor: coloca a classe .nome, usa-se em mais de uma tag. (comum em vários, usa classe.)
+Terceiro seletor: coloca o id #nome, usa-se em apenas uma tag específica. (Não pode começar com números, ter os mesmos nomes etc.
+Coringa: usado todos os elementos na em toda a página *
+Existem seletores mais compelxos: dentro de outra tag etx, mas não são tão usuais-->
+
+
+<!--Propriedades color, colorir texto: RGB, hexadecimal. Pesquise antes de usar-->
