@@ -1,3 +1,7 @@
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+</style>
+
 /*body {
     background-color:yellow;
 }
@@ -45,10 +49,155 @@ h1, p { Posso agrupar as duas tags, pois possuem itens em comum
     text-align: left;
 }*/
 
-h1 {
-    color:#13a3a8;
+body {
+    background-color: white;
 }
+
+h1 {
+    color: white;
+    border-left: 5px dashed rgb(255, 4, 4); /*Bordas e outros elementos em uma só linha*/
+    border-top: 5px dashed rgb(4, 244, 67);
+    border-right: 5px solid rgb(43, 3, 254);
+    border-bottom: 5px solid rgb(255, 117, 20);
+    border-radius: 30px; /*Borda arredondada*/
+    text-align: center;
+    background: black;
+
+    margin-top: 30px; /*Margem, afasta*/
+    margin-bottom: 150px;
+    margin-left: 20px;
+    margin-right: 70px;
+
+    margin: 30px, 70px, 150px, 20px;/*aceita em uma linha nesta ordem: top, right, bottom, left*/
+
+    padding-top:50px;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right: 40px;
+
+    padding: 50px, 40px, 20px, 20px; /*aceita em uma só linha*/
+    padding: 50px; /*Assim vale para todos*/
+
+    letter-spacing: -2px;
+
+    font-family: "Londrina Sketch", sans-serif;
+
+    /*padding é parecido com margin, mas é da parte de dentro.
+    Serve para criar botões estilizados*/
+}   
 
 p {
     color: red;
+    margin-bottom: 60px;
+    margin-left:20px;
+    margin-right: 100px;
+
+    text-align: center; /*Os mais utilizados são: center, left, right, justify*/
+    /*direction: rtl; letras invertidas*/
+    /*unicode-bidi:bidi-override; /*de rás para frente palavras. no html tem isso tbm*/
+    text-decoration:none; /*tracejado. Sublinado: underline*/
+    text-transform: none; /*Maiúscula; minúscula: lower. A primeira letra em maiúscula: capitalize*/
+    text-indent:60px; /*Efeito de parágrafo*/
+    letter-spacing:5px; /*Separa as letras horizontal, espaçamento*/
+    line-height:2; /*Espaçamento de altura */
+    word-spacing: 20px; /*Espaçamento de palavras px*/
+
+    font-family: "Indie Flower", cursive; /*Tipos de fontes que vem por padrão. Outras precisa importar*/
+    font-size: 20px; /*Google fonts para fontes gratuitas. Fontes possuem direitos*/
+    font-style: none; /*Estilo da fonte: italic, obliquo*/
+    font-weight: 700; /*Grossura da fonte. Pode-se usar bold*/
+}
+
+.exemplo-back {
+    height: 100px;
+    /*background-color: gray; Cor sólida*/ 
+    /*background-image: url("../img/city.jpg");
+    background-size: cover; /*100%*. Tamanho da imagem
+    background-repeat: no-repeat; /*Não repete background
+    background-position: center;*/
+    background: gray url("../img/city.jpg") no-repeat center; /*Passando vários elementos de backgorund todos. Poupar código*/ 
+    background-size: cover;
+    margin-bottom: 100px
+
+    /*Basicamente passa-se imagem ou color e define posições, tamanhos, efeitos etc.*/
+}
+
+#botao {
+    border-radius: 20px;
+    margin-left:33%;
+    background: green;
+    color:white;
+    padding: 30px;
+    text-decoration: none; 
+
+
+}
+
+#botao:hover { /*Sobreescreve, efeito visual ao passar o mouse*/
+    background: blue;
+}
+
+.teste {
+    max-width:800px; /*ideal para dispositivos móveis, responsividade*/
+    height:150px;
+    background: cyan;
+}
+
+a.botao1 { /*Só ocorre com link nesta classe (seletor específico) */
+    background: darkgreen;
+    color:white;
+    padding:10px;
+    text-decoration: none;
+    border:4px solid greenyellow;
+    border-radius: 5px;
+}
+
+a.botao1:hover {
+    background: rgb (6, 211, 6);
+    padding:12px;
+    border:4px solid rgb(8, 129, 6);
+    
+}
+
+a.botao2 {
+    text-decoration: none;
+    padding:10px;
+    border: 5px double blue;
+    color:blue;
+}
+
+a.botao2:hover {
+    text-decoration: underline;
+    padding: 8px;
+    background: blue;
+    color:white;  
+}
+
+a.botao3 {
+    color: black;
+    text-decoration: none;
+}
+
+a.botao3:hover {
+    border-bottom:5px solid red;
+}
+
+a.botao4 {
+    text-decoration:none;
+    color:blue;
+    font-size: 18px;
+}
+
+a.botao4:hover {
+    font-size:22px;
+    font-weight: bold;
+}
+
+a.botao5 {
+    cursor: help; /*Comportamento do cursor. Criatividade para montar, boniteza, fica ao seu critério */
+    text-decoration: none;
+}
+
+a.botao5:hover {
+    text-decoration: underline;
 }
