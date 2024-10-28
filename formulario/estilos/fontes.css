@@ -1,0 +1,7 @@
+@font-face{
+    font-family: "robotic";
+    src: url("../componentes/fontes/Robotic\ Cyborg.woff") format("woff"),
+         url("../componentes/fontes/Robotic\ Cyborg.woff2") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
