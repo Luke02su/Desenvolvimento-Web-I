@@ -1,6 +1,4 @@
-<style>
 @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
-</style>
 
 /*body {
     background-color:yellow;
@@ -51,6 +49,8 @@ h1, p { Posso agrupar as duas tags, pois possuem itens em comum
 
 body {
     background-color: white;
+    /*overflow-y:hidden;
+    overflow-x:hidden; omite barra de rolagem, tira barra de rolam x e y */
 }
 
 h1 {
@@ -128,9 +128,7 @@ p {
     background: green;
     color:white;
     padding: 30px;
-    text-decoration: none; 
-
-
+    text-decoration: none;
 }
 
 #botao:hover { /*Sobreescreve, efeito visual ao passar o mouse*/
@@ -200,4 +198,354 @@ a.botao5 {
 
 a.botao5:hover {
     text-decoration: underline;
+}
+
+.borda {
+    border: 1px solid red; /*Por padrão são em blocos, display */
+}
+
+p {
+    display: block; 
+}
+
+
+#p1 {
+    display:block; /*none desaparece conteúdo, block */
+}
+
+#p1:hover {
+    display:none;
+}
+
+li { /*
+    display:inline-block; /*Por padrão é block
+    width:33%;
+    height: 150px;
+    */
+}
+
+.azul {
+    background: blue;
+}
+
+.vermelho {
+    background: red;
+    visibility: hidden; /*hidden (oculto) e display:none diferença*/
+}
+
+.verde {
+    background: green;
+}
+
+div {
+    /*display: inline-block;
+    width: 33%;
+    height: 150px;*/
+}
+
+a.botao10 {
+    display: inline-block;
+    margin-top: 100px;
+    width: 50%;
+    height: 50px;
+    text-align: center;
+}
+
+.ex1 {
+    margin-top:100px;
+    width:800px;
+}
+
+.ex2 {
+    max-width: 800px;  /*Barra de rolagem se exceder o tamanho da tela. Ideal largura máxima, para se ajustar a tela conform necessidade, responsivo*/   
+
+}
+
+/*Se o display não obedecer, pode ser que seja do tipo inline ou block*/
+
+.container {
+    background: blue;
+    width: 100%;
+    height: 400px;
+    position:relative; /*Muda em relação a onde está*/
+    border: 2px dashed red;
+}
+
+.div1 {
+    position: relative; /*Padrão é static*/
+    left:60px; /*Espaço pode invaidr outra div, diferente da margem e padding*/
+    top:50px;
+    z-index:-1; /*Quem está ]á frente ou atrás quando se usa position, somente quando se usa*/
+
+    width: 30%;
+    height: 100px;
+    background: yellow;
+    display:inline-block;
+}
+
+.div2 {
+    position:sticky;/*Gruda na barra de rolagem, ele não rola mais. Dentro do pai dela (container), da div em que estã*/
+    top:0; /*sticky funciona até o top ser 0*/
+    width: 30%;
+    height: 100px;
+    background: white;
+    display:inline-block;
+}
+
+.div3 {
+    width: 30%;
+    height: 100px;
+    background: red;
+    display: inline-block;
+    position: absolute; /*Posição absoluta em relação ao ancestral, desde que não seja static*/
+    top:150px;
+    right: 50%;
+}
+
+.whats {
+    background: green;
+    color:white;
+    width: 80px;
+    height: 80px;
+    position:fixed; /*Posicionamento fixo, em relação ao elemento, tela, ele ficará parado, indepndente se rolar a tela ou não*/
+    bottom:10px; /*Posicionamento lá em baixo, 0 a 100*/
+    right: 10px;
+}
+
+/*Por que usa position? Para fazer efeitos*/
+
+.centro {
+    position:absolute; /*tag filha da pai div*/
+    color: black;
+    top:50%;
+    width: 100%;
+    text-align: center;
+}
+
+img { /*
+    position: relative;
+    bottom: 104px;
+    width: 100%;
+    opacity: 0.5;
+    */
+}
+
+h3 {
+    color:white;
+}
+
+#exemplo {
+    background: blue;
+    color:white;
+    display: block;
+    height: 150px;;
+    overflow: auto;/*Só funciona quando usa height, senão não faz sentido. Mostra hidden apenas dentro, for oculta. scroll só aparece quando necessita dentro do tamanho de 150 */
+}
+
+.overflow {
+    overflow-y:hidden;
+}
+
+/*Overflow: comporamento do elemento, barra de rolagem*/
+
+.container2 {
+    border:1px solid black;
+    overflow:none; /*Se conteúdo transbordae, preenche tamanho, no caso, do texto borda à imagem*/
+}
+
+.container2 img {
+    float: left; /*Elementos float, fica flutuando dentro, solta do container (div). Espaço é liberado para o outro*/
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    background: black;
+    padding: 20px;
+}
+
+li {
+    display: inline-block; 
+}
+
+li a {
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+}
+
+li a:hover {
+    background: #ccc;
+    color:black;
+}
+
+.login {
+    float:right; /*Se fosse á esquerda, os demais elementos se moveriam paara direitamargin-left: 70% daria o mesmo resultado, mas acho que poderia ser gambiarra, dependendo;*/
+}
+
+.login a:hover {
+    background: orangered;
+    color:white;
+}
+
+.img1 {
+    opacity:1; /*0.0 até 1.0. Padrão é 1*/
+}
+
+.img1:hover {
+    opacity:0.9;
+}
+
+.img2 {
+    opacity:1;
+}
+
+.img2:hover {
+    opacity:0.7;
+}
+
+.img3 {
+    opacity:1;
+}
+
+.img3:hover {
+    opacity:0.3;
+}
+
+a.botao100 { /*primeiro seletor, depois a classe*/
+    padding:15px;
+    background: green;
+    color:white;
+    text-decoration: none;
+}
+
+a.botao100:hover {
+    opacity: 0.9;
+}
+
+.transparente {
+    background:blue;
+    color: white;
+    padding:40px;
+    opacity:0.5; /*Transparência também pega texto. Cuidado ao usar em elementos como divs e textos paa não atrapaçhar a visualização dos usuários*/
+}
+
+ul {
+    background: black;
+    list-style-type:none; /*Nenhum estilo na lista, tira as bolinhas, sem text decoration, pois a está dentro */
+    padding:0;
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+li {
+    float:left;
+}
+
+li a, dropbtn {
+    display:inline-block;
+    color:white;
+    padding:14px 16px;
+    text-decoration:none;
+    text-align: center;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display:none;
+    position: absolute;
+    background: white;
+    width:150px;
+}
+
+.dropdown-content a {
+    color: black;
+    display:block;
+    text-align: left;
+    border:1px solid rgb(226, 179, 179);
+}
+
+.dropdown-content a:hover{
+    color:white;
+}
+
+.dropdown:hover .dropdown-content { /*Só com CSS é possível fazer dropdown, sem javascript*/
+    display:block;
+}
+
+#titulo {
+    background: blue;
+}
+
+.red {
+    padding: 0%;
+    border: none;
+    background: red;
+    font-size: 12;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+h1 {
+    background: yellow !important; /*!important ignora por completo as demais prioridades, priorizando essa. Não é ideal usá-la, é mais comopaliativo*/
+    text-shadow: 2px 2px 5px red;/*sombra, suavizar blur. Difícil acertar, ir acertando*/
+}
+
+h1.red {
+    background: orange; /*Maior prioridade, dois seletores*/
+}
+
+/*Especificidade CSS: tipo de seletor. 
+Classe sempre tem prioridade ao seletor simples. 
+Se fosse dentro do css interno essa xlasse, teria ainda mais prioridade
+Identificador é mais forte que classe.
+Se passar igual o seletor h1, o último é o que vai valer
+
+tag normal no CSS inline > id > tag normal + class > class > seletor simples]
+*/
+#gradiente {
+    width: 100%;
+    height: 300px;
+    background-image: linear-gradient(45deg, blue, red, green); /*Gradiente: configurações variadas, inclinacao, direcao, numero de cores*/
+    background-image: radial-gradient(red, orange); /*Circular*/
+}
+
+.multipla {
+    color:black;
+    text-shadow:0 0 3px #FF0000, 2px 2px 5px yellow; /*Múltiplas sombras*/
+}
+
+.caixa {
+    width: 100%;
+    height: 300px;
+    background: gray;
+    box-shadow: 5px 5px 15px red; /*sombra na div no fundo*/
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19) efeito de card na div, outros elementos q não sejam textoimagem, por exemplo. Pesquise na internet*/
+}
+
+.card {
+    margin-top: 10px;
+    text-align: center;
+    background: white;
+    width: 40%;
+    /*overflow:hidden; corta um pouco o texto, por isso não foi utilizado*/
+    height: auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.reduzido {
+    white-space: nowrap; /*item que tem varias quebras de linha fica em uma só linha*/
+    overflow: hidden; /*dentro do limite, corta*/
+    text-overflow: ellipsis; /*coloca três pontos ... continuação*/
+    padding-bottom: 30px;
+}
+
+.card:hover .reduzido { /*ao passar mouse, reduzio muda*/
+    white-space: normal;
 }
