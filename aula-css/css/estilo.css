@@ -549,3 +549,82 @@ tag normal no CSS inline > id > tag normal + class > class > seletor simples]
 .card:hover .reduzido { /*ao passar mouse, reduzio muda*/
     white-space: normal;
 }
+
+* {
+    box-sizing:border-box;
+} /* tamnho da caix, toos elementos. padrão em todo css*/
+
+.flex-pai {
+    background: blue;
+    height: 600px;
+    display:flex;
+    flex-direction: row;
+    /*flex-wrap: wrap; (wrap [é para cair para linha de baixo se encher // nowrap (lembra oveflow): Padrão vem nowrap: limite da div*/
+    flex-flow: row wrap; /*junta os dois*/
+    justify-content: flex-end; /*com funcionarao sentido horizontal parecido co float. space-beetween espaco entre; sapace-around (espaco em volta)*/
+    align-items: center; /*individual. padrao strech. alinhamento na vertical*/
+    align-content:center; /*pega todo bloco*/
+}
+
+/*@media screen and (max-width:600px) {
+    .flex-pai {
+        flex-direction: column; /*Melhor que usar float etc, mais fácil
+}*/
+
+.flex-pai div { /*div filho*/
+    flex-grow:1; /* divs crescerão de forma uniforme */
+    background: white;
+    border:1px solid black;
+    margin:5px;
+    padding:30px;
+    text-align: center;
+}
+
+body {
+    margin: 0;
+}
+#header{
+    background: rgb(115, 179, 20);
+    padding: 80px;
+    text-align: center;
+    color:white; 
+    font-family:'Courier New', Courier, monospace;
+    border: none;
+}
+
+.navbar {
+    display:flex;
+    justify-content:center;
+    background: black;
+}
+
+.navbar a {
+    color:white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background: grey;
+    color:black;
+    font-weight: bold;
+}
+
+@media screen and (max-width:720px) {
+    .navbar {
+        flex-direction: column;
+    }
+}
+
+.corpo {
+    display:flex;
+    flex-flow: row wrap;
+}
+
+.card1 {
+    flex:48%;
+    background: #ccc;
+    height: 100px;
+    margin: 1%;
+}
