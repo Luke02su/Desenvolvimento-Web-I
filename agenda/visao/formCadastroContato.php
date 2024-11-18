@@ -11,7 +11,7 @@
     <label for="nome"> Telefone: </label>
     <input type="text" id="tel" name="telefone"/> <br>
 
-    <input type="submit" name="enviar" value="enviar"/>
+    <input type="submit" name="enviar" value="Enviar"/>
     <!--variável enviar (name) recebe o valor enviar -->
 
 </form>

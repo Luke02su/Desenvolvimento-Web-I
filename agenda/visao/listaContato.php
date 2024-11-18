@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Contatos</title>
+    <link rel="stylesheet" href="./visao/estilos/estilo.css">
 </head>
 <body>
     <?php
@@ -32,7 +33,7 @@
                 echo "<TD>" . $c->getEmail() . "</TD>";
                 echo "<TD>" . $c->getTelefone() . "</TD>";
                 echo "<TD><a href=contato.php?fun=alterar&id=" . $c->getId() . "><img src='visao/img/update.png' width='30px' /></a></TD>";
-                echo "<TD><a href=contato.php?fun=alterar&id=" . $c->getId() . "><img src='visao/img/delete.png' width='30px' /></a></TD>";
+                echo "<TD><a href=contato.php?fun=excluir&id=" . $c->getId() . "><img src='visao/img/delete.png' width='30px' /></a></TD>";
                 echo "</TR>";
             }
         ?>

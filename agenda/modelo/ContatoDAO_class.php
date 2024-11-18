@@ -34,6 +34,48 @@
             }
         }
 
+        //alterar
+		public function alterar($cont){
+			try{
+				$stmt = $this->con->prepare(
+				"UPDATE contato SET nome=:nome, 
+				email = :email, telefone=:telefone WHERE
+				id=:id");
+				
+				//ligamos as âncoras aos valores de Contato
+				$stmt->bindValue(":nome", $cont->getNome());
+				$stmt->bindValue(":email", $cont->getEmail());
+				$stmt->bindValue(":telefone", $cont->getTelefone());
+				$stmt->bindValue(":id", $cont->getId());
+				
+				$this->con->beginTransaction();
+			    $stmt->execute(); //execução do SQL	
+				$this->con->commit(); 
+				/*$this->con->close();
+				$this->con = null;*/	
+			}
+			catch(PDOException $ex){
+				echo "Erro: " . $ex->getMessage();
+			}
+		}
+
+		//excluir
+		public function excluir($cont){
+			try{
+				$num = $this->con->exec("DELETE FROM contato WHERE id = " . $cont->getId());
+				//numero de linhas afetadas pelo comando
+				
+				if($num >= 1){
+					return 1;
+				} else {
+					return 0;
+				}
+			}
+			catch(PDOException $ex){
+				echo "Erro: " . $ex->getMessage();
+			}
+		}
+
         public function listar($query = null) {
             //se não recebe parãmetro *ou seja, uma consulta personalizada)
             //$query recebe nulo
@@ -64,5 +106,29 @@
                 echo "Erro " . $ex->getMessage();
             }
         }
+
+        		//exibir 
+		public function exibir($id){			
+			try{				
+				$lista = $this->con->query("SELECT * FROM contato WHERE id = " . $id);
+				
+				/*$this->con->close();
+				$this->con = null;*/
+				
+				$dado = $lista->fetchAll(PDO::FETCH_ASSOC);
+				
+				$c = new Contato();
+				$c->setId($dado[0]["id"]);
+				$c->setNome($dado[0]["nome"]);
+				$c->setTelefone($dado[0]["telefone"]);
+				$c->setEmail($dado[0]["email"]);
+				
+				return $c;	
+			}
+			catch(PDOException $ex){
+				echo "Erro: " . $ex->getMessage();
+			}
+			
+		}
     }
 ?>
