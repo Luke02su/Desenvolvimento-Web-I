@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cadastro com Validaçao</title>
-    <script src="formMask_V2.js"></script>
     <script>
         function valida(form) {
             if(form.nome.value == "") {
@@ -39,7 +38,7 @@
     <form action="cadastro.php" method="POST" onsubmit="return valida(this);">
       Nome: <input type="text" name="nome" /><br /><br />
       E-mail: <input type="text" name="email" /><br /><br />
-      CPF: <input type="text" id="cpf">
+      CPF: <input type="text" id="cpf" onkeypress="return mask(event)" maxlength="14"><br /><br />
       
       Idade:
       <input type="text" name="idade" maxlength="2" size="2" /><br /><br />
@@ -50,7 +49,7 @@
       <input type="text" name="data_nascimento" 
       value = "dd/mm/aaaa" maxlength="10"
       onfocus="if(this.value=='dd/mm/aaaa') {this.value=''}"
-      onblur="if(this.value=='') {this.value='dd/mm/aaaa'}"/><br /><br />
+      onblur="if(this.value=='') {this.value='dd/mm/aaaa'}"/><br /><br /> <!-- //onfocus quando clica //onblur quando sai -->
       Senha: <input type="password" name="senha" />(Minimo: 6 caracteres)<br /><br />
       Confirmação de Senha:
       <input type="password" name="conf_senha" /><br /><br />
@@ -60,6 +59,3 @@
     </form>
   </body>
 </html>
-
-//onfocus quando clica
-//onblur quando sai
