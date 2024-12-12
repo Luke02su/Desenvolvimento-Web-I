@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro com Validaçao</title>
+    <script src="formMask_V2.js"></script>
+    <script>
+        function valida(form) {
+            if(form.nome.value == "") {
+                alert("Preencha o nome corretamente.");
+                form.nome.focus(); // aciona o evento (focus)
+                return false;
+            }
+            if (form.data_nascimento.value == ""  || form.data_nascimento.value.legth != 10) {
+                alert("Preecha a data corretamente.");
+                form.data_nascimento.focus();
+                return false;
+            }
+            if(form.senha.value == "" || form.senha.value.legth < 6) {
+                alert("Preencha a senha corretamente.");
+                form.senha.focus();
+                return false;
+            }
+            if(form.conf_senha.value != form.senha.value) {
+                alert("A senha e a confirmação tem de ser iguais.");
+                form.conf_senha.focus();
+                return false;
+            }
+            if (form.sexo[0].checked == false && form.sexo[1].checked == false) {
+                alert("Selecione o sexo.");
+                return false;
+            }
+
+        };
+    </script>
+  </head>
+  <body>
+    <form action="cadastro.php" method="POST" onsubmit="return valida(this);">
+      Nome: <input type="text" name="nome" /><br /><br />
+      E-mail: <input type="text" name="email" /><br /><br />
+      CPF: <input type="text" id="cpf">
+      
+      Idade:
+      <input type="text" name="idade" maxlength="2" size="2" /><br /><br />
+      Endereço: <input type="text" name="endereco" /><br /><br />
+      Telefone: <input type="text" name="tel" maxlength="10" /> (Formato:
+      DDD+TELEFONE: 1122223333)<br /><br />
+      Data de Nascimento:
+      <input type="text" name="data_nascimento" 
+      value = "dd/mm/aaaa" maxlength="10"
+      onfocus="if(this.value=='dd/mm/aaaa') {this.value=''}"
+      onblur="if(this.value=='') {this.value='dd/mm/aaaa'}"/><br /><br />
+      Senha: <input type="password" name="senha" />(Minimo: 6 caracteres)<br /><br />
+      Confirmação de Senha:
+      <input type="password" name="conf_senha" /><br /><br />
+      Sexo: <input type="radio" name="sexo" value="masc" />Masculino
+      <input type="radio" name="sexo" value="fem" />Feminino<br /><br />
+      <input type="submit" value="enviar" />
+    </form>
+  </body>
+</html>
+
+//onfocus quando clica
+//onblur quando sai
