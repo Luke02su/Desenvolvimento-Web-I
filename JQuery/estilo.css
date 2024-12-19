@@ -1,0 +1,31 @@
+* {
+    padding:0;
+    margin:0;
+}
+
+main {
+    margin:auto;
+    border: 2px solid black;
+    width: 900px;
+    text-align: center;
+}
+
+li {
+    display: inline-block;
+    list-style: none;
+    margin-right: 15px;
+}
+
+#principal {
+    width: 300px;
+    margin-bottom:30px;
+}
+
+.imgPeq {
+    width: 100px;
+}
+
+.imgSelecionado {
+    border: 2px solid blue;
+    opacity: 0.8;
+}

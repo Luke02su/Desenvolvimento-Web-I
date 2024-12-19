@@ -34,6 +34,11 @@
                     $("#msg").css("background-color", "bisque");
                 }
             });
+            $("#pegaFoto").click(function() {
+                let nomeArq = $("#foto").atrr("src");
+                //busca o atributo src e guarda o valor
+                alert(nomeArq);
+            });
         });
     </script>
 </head>
@@ -50,5 +55,9 @@
     <button id="btnEven">First</button>
 </div>
 <button id="btn">Vermelho</button>
+
+<img src="foto.webp" width="300px" id="foto">
+<button id="pegaFoto">Pega nome foto</button>
+
 </body>
 </html>
